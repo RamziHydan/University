@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+{% load static i18n %}
+{% get_current_language_bidi as LANGUAGE_BIDI %}  <!-- 1 -->
+<html dir="{% if LANGUAGE_BIDI %}rtl{% else %}ltr{% endif %}">  <!-- 2 -->
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    {% load static %}
+    {%include 'navbar.html'%}   
+    {% for c in str %}
+    <section id="contact" class="contact section-bg">
+        <div class="container" data-aos="fade-up">
+            <div class="section-title">
+                {% if LANGUAGE_CODE == 'ar'%}
+                <h2>{{c.collage_ar}}</h2>
+                <h3> {% trans 'Strategy' %}</h3>
+                <h5> {{c.subject_ar}}</h5>
+                {% else %}
+                <h2>{{c.collage}}</h2>
+                <h3> {% trans 'Strategy' %}</h3>
+                <h5> {{c.subject}}</h5>
+                {% endif %}
+            </div>
+        </div>
+    </section>
+    {% endfor  %}
+    {% include 'footer.html' %}
+
+</body>
+
+</html>

@@ -1,0 +1,26 @@
+{% extends 'studentaff/schedule.html' %}
+
+{% block content %}
+
+  
+<div class="container pt-5">
+
+    {% for document in documents %}
+    <div class="container pt-2 text-center">
+        <div class="table-responsive pt-5"> 
+    <table class="table table-dark table-striped table-hover align-middle">
+        <tr>
+            <td class="align-middle " >{{document.id}}</td>
+            <td class="align-middle">{{ document.collage_name }}</td>
+            <td class="align-middle  " class=""><a href="{% url 'download' document.id %}" class="btn btn-outline-info fs-3"><i class="bi bi-file-earmark-arrow-down"></i> </a> </td>
+            <td class="align-middle">{{document.date_created}}</td>
+          </tr>
+    </table>        
+</div>  
+</div>   <!-- <br>  <div class="btn btn-outline-info"><i class="bi bi-file-earmark-arrow-down"></i> </div> </a> <br> -->
+</div> 
+    {% empty %}
+      <li>{% trans 'No documents found.' %} </li>
+    {% endfor %}
+  
+{% endblock %}

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+{% load static i18n %}
+{% get_current_language_bidi as LANGUAGE_BIDI %}  <!-- 1 -->
+<html dir="{% if LANGUAGE_BIDI %}rtl{% else %}ltr{% endif %}">  <!-- 2 --><head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+   
+
+{%include 'navbar.html'%}
+
+
+{% for d in activities %}
+<div class="container ">
+    <div class="row mt-5 mb-4">
+        <div class="col-lg-1 col-md-1"></div>
+        <div class="col-lg-10 col-md-5 pt-5"> 
+            {% if LANGUAGE_CODE == 'ar'%}      
+                    <div class="pic"><img src="{{d.image.url}}" class="img-fluid"  alt=""></div>
+        <h5>{{d.subject_1_ar}}</h5> <br>
+        <h5>{{d.subject_2_ar}}</h5><br>
+        <h5>{{d.subject_3_ar}}</h5><br>
+        <h5>{{d.subject_4_ar}}</h5><br>
+        <h5>{{d.subject_5_ar}}</h5><br>
+{% else %}
+        <div class="pic"><img src="{{d.image.url}}" class="img-fluid"  alt=""></div>
+        <h5>{{d.subject_1}}</h5> <br>
+        <h5>{{d.subject_2}}</h5><br>
+        <h5>{{d.subject_3}}</h5><br>
+        <h5>{{d.subject_4}}</h5><br>
+        <h5>{{d.subject_5}}</h5><br>
+{% endif %}
+        </div>
+    </div>
+</div>
+{% endfor %}
+{% include 'footer.html' %}
+
+</body>
+</html>
+

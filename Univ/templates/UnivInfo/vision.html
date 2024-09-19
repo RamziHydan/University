@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+{% load static i18n %}
+{% get_current_language_bidi as LANGUAGE_BIDI %}  <!-- 1 -->
+<html dir="{% if LANGUAGE_BIDI %}rtl{% else %}ltr{% endif %}">  <!-- 2 -->
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    {% load static %}
+    {%include 'navbar.html'%}
+
+    <div class="container my-5">
+        {% for v in data %}
+        <!-- ======= Vision Section ======= -->
+        <section id="Vision" class="team">
+            <div class="container mb-5">
+                <div class="row">
+                    <div class="section-title" data-aos="fade-in" data-aos-delay="100">
+                        {% if LANGUAGE_CODE == 'ar'%}
+                        <h2>{{v.vheader_ar}}</h2>
+                        <p>{{v.vision_ar}}</p>
+                        {% else %}
+                        <h2>{{v.vheader}}</h2>
+                        <p>{{v.vision}}</p>
+                        {% endif %}
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- End Vision Section -->
+        {% endfor %}
+        <section id="contact" class="contact section-bg">
+            <div class="container" data-aos="fade-up">
+                <div class="row">
+                    {% for v in photo %}
+                    <div class="col-lg-3 col-md-6">
+                        <div class="info-box  mb-4">                            
+                            <div class="pic"><img src={{v.image.url}} class="img-fluid" alt="" width="100" height="80"></div>
+                        </div>
+                    </div>
+                    {% endfor %}
+                </div>
+            </div>
+        </section>
+        <!-- ======= Massage Section ======= -->
+        {% for v in data %}
+        <section id="Vision" class="team">
+            <div class="container mb-5">
+                <div class="row">
+                    <div class="section-title" data-aos="fade-in" data-aos-delay="100">
+                        {% if LANGUAGE_CODE == 'ar'%}
+                        <h2>{{v.mheader}}</h2>
+                        <p>{{v.univmessage}}</p>
+                        {% else %}
+                        <h2>{{v.mheader_ar}}</h2>
+                        <p>{{v.univmessage_ar}}</p>
+                        {% endif %}
+                    </div>
+                </div>
+            </div>
+        </section>
+        {% endfor %}
+    </div>
+    {% include 'footer.html' %}  
+</body>
+</html>

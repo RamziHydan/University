@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+{% load static i18n %}
+{% get_current_language_bidi as LANGUAGE_BIDI %}  <!-- 1 -->
+<html dir="{% if LANGUAGE_BIDI %}rtl{% else %}ltr{% endif %}">  <!-- 2 -->
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+   
+
+{%include 'navbar.html'%}
+    
+<!-- ======= Team Section ======= -->
+<section id="team" class="team">
+    <div class="container">
+        <div class="section-title" data-aos="fade-in" data-aos-delay="100">
+            <h2>{% trans 'University Environment' %}</h2>          
+        </div>
+        <div class="row my-5">
+{% for d in build %}
+            <div class="col-lg-4 col-md-6">
+                <div class="member" data-aos="fade-up">
+                    {% if LANGUAGE_CODE == 'ar'%}
+                    <div class="pic"><img src="{{d.image.url}}" class="img-fluid" alt=""></div>
+                    <div class="member-info">
+                        <h4>{{d.name_ar}}</h4>
+                        <span>{{d.title_ar}}</span>
+                    {% else %}
+                        <div class="pic"><img src="{{d.image.url}}" class="img-fluid" alt=""></div>
+                        <div class="member-info">
+                            <h4>{{d.name}}</h4>
+                            <span>{{d.title}}</span>
+                    {% endif %}
+                        <div class="social">                           
+                            <a href="{% url 'env_details' d.id %}"><i class="bi bi-arrow-bar-left btn btn-info ">{% trans 'Details'%}</i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+{% endfor%}
+        </div>
+    </div>
+</section>
+{% include 'footer.html' %}
+</body>
+</html>
+

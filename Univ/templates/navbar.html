@@ -1,0 +1,150 @@
+{% load static %}
+{% load i18n %}
+{% get_current_language as LANGUAGE_CODE %}
+{% get_available_languages as LANGUAGES %}
+{% get_language_info_list for LANGUAGES as languages %}
+{% include 'header.html' %}
+<!-- ======= Header ======= -->
+<header id="header" class="fixed-top header-transparent">
+    <div class="container d-flex align-items-center justify-content-between">
+        <div class="logo">
+           <!-- <h4> <span  style="color:#db2a2a ;" > <b>DAR AL-</b> </span>  SALAM</h4> -->
+                <!-- <a href="{% url 'index' %}"><img src="/static/FB_IMG_1684678445511.jpg"  width="80" height="100"  alt="Logo" srcset=""> </a> -->
+            
+            <!-- Uncomment below if you prefer to use an image logo -->
+            <a href="index.html"><img src="logo.png" alt="" class="img-fluid" /></a>
+        </div>
+
+        <nav id="navbar" class="navbar">
+            <ul>
+                <li>
+                    
+                    <a class="nav-link scrollto active" href="{% url 'index' %}">{% trans 'Home'%} </a>
+                </li>
+                <li class="dropdown">
+                    <a href="#"><span>{% trans 'About Univ' %} </span> <i class="bi bi-chevron-down"></i></a>
+                    <ul>
+                        <li class="dropdown">
+                            <a href="#"><span>{% trans 'Brief About Univ' %}</span> <i class="bi bi-chevron-left"></i></a>
+                            <ul>
+                                <li><a href="{% url 'vision' %}">{% trans 'Message and Vision' %}</a></li>
+                                <li><a href="{% url 'board' %}">{% trans 'Chairman presedent' %}</a></li>
+                                <li><a href="{% url 'univpre' %}">{% trans 'Univ presedent word' %}</a></li>
+                                <li><a href="https://www.darsys.online/darsysonline/">{% trans 'E-Learning' %}</a></li>
+                                <li><a href="https://www.darsys.online/darsyssearch/">{% trans 'Studying and Research' %}</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="{% url 'Univteam' %}">{% trans 'Univ Team' %}</a></li>
+                    </ul>
+                </li>
+
+                <li class="dropdown">
+                    <a href="{% url 'collage' %}"><span>{% trans 'Collages' %} </span> <i class="bi bi-chevron-down"></i></a>
+                    <ul>
+                        <li class="dropdown">
+                            <a href="{% url 'medicine' %}"><span>{% trans 'Medicine Collage' %}</span> <i class="bi bi-chevron-left"></i></a>
+                            <ul>
+                                <li><a href="{% url 'strategym' %}">{% trans 'Collage Strategy' %}</a></li>
+                                <li><a href="{% url 'majorm' %}">{% trans 'Collage Major' %}</a></li>
+                                <li><a href="{% url 'collagelibm' %}">{% trans 'Collage Library' %}</a></li>
+                                <li><a href="{% url 'teamm' %}">{% trans 'Collage Team' %}</a></li>
+                            </ul>
+                        </li>
+                        <li class="dropdown">
+                            <a href="{% url 'engineering' %}"><span>{% trans 'Engineering Collage' %}</span> <i
+                                    class="bi bi-chevron-left"></i></a>
+                            <ul>
+                                <li><a href="{% url 'strategy' %}">{% trans 'Collage Strategy' %}</a></li>
+                                <li><a href="{% url 'major' %}">{% trans 'Collage Major' %}</a></li>
+                                <li><a href="{% url 'collagelib' %}">{% trans 'Collage Library' %}</a></li>
+                                <li><a href="{% url 'team' %}">{% trans 'Collage Team' %}</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </li>
+                <li class="dropdown">
+                    <a href="#"><span>{% trans 'Students Affairs' %}</span> <i class="bi bi-chevron-down"></i></a>
+                    <ul>
+                        <li><a href="{% url 'schedule' %}">{% trans 'Studying Schedule' %}</a></li>
+                        <li><a href="{% url 'login' %}">{% trans 'Acceptance And Registration' %}</a></li>
+                        <li><a href="https://p.oasyemen.net/portal/step1.php?unid=42">{% trans 'Electronic Croodination Portal' %}</a></li>
+                        <li><a href="https://xlserver.al-emtiaz.net/XLWeb/Default.aspx?u=Univ_EIU">{% trans 'Student Result' %}</a></li>
+                    </ul>
+                </li>
+                <li class="dropdown">
+                    <a href="#"><span>{% trans 'News' %}</span> <i class="bi bi-chevron-down"></i></a>
+                    <ul>
+                        <li><a href="{%url 'news' %}">{% trans 'News' %}</a></li>
+                        <li><a href="{% url 'ads' %}">{% trans 'Advertisment' %}</a></li>
+                        <li><a href="{% url 'activities' %}">{% trans 'Activities' %}</a></li>
+                    </ul>
+                </li>
+                <li class="dropdown">
+                    <a href="#"><span>{% trans 'Univ Life' %}</span> <i class="bi bi-chevron-down"></i></a>
+                    <ul>
+                        <li><a href="{% url 'env' %}">{% trans 'Univ Environment' %} </a></li>
+                        <li><a href="{% url 'perfect' %}">{% trans 'Early University Student' %}</a></li>
+                        <li><a href="{% url 'service' %}">{% trans 'Service Facilities' %}</a></li>
+                        <li><a href="{% url 'guide' %}">{% trans 'Student guide' %}</a></li>
+                    </ul>
+                </li>
+                <li class="dropdown">
+                    <a href="#"><span>{% trans 'Univ Lab' %}</span> <i class="bi bi-chevron-down"></i></a>
+                    <ul>
+                        <li><a href="{% url 'medlab' %}">{% trans 'Medicine Lab' %}</a></li>
+                        <li><a href="{% url 'englab' %}">{% trans 'Engineering Lab' %}</a></li>
+                    </ul>
+                </li>
+                <li><a class="nav-link scrollto" href="#contact">{% trans 'Contact' %}</a></li>
+                <!--this for more than tow languages -->
+                <!-- <li>
+                    <form action="{% url 'set_language' %}"  method="post">{% csrf_token %}
+                        <div class="input-group">
+              
+                   <button type="submit" value="Go" class="btn btn-outline-info " >{% trans 'Save' %}
+                         </button>
+                     
+                     <input name="next" type="hidden" class="form-control form-control-sm" value="{{ redirect_to }}">
+                                      {% get_current_language as LANGUAGE_CODE %}
+                                      {% get_available_languages as LANGUAGES %}
+                                      {% get_language_info_list for LANGUAGES as languages %}
+                     <select class="form-select-sm" name="language">
+                                          {% for language in languages %}
+                                            <option value="{{ language.code }}"{% if language.code == LANGUAGE_CODE %}
+                                            selected {% endif %}>
+                                    {{ language.name_local }} ({{ language.code }})
+                            </option>
+                                          {% endfor %}
+                             </select>
+                  </div>    
+              </form>               
+                </li> -->
+                
+                
+                <!-- this for tow languages -->
+                <li class="">
+                    <form action="{% url 'set_language' %}" method="post">
+                        {% csrf_token %}
+                        {% get_current_language as LANGUAGE_CODE %}
+                        <input type="hidden" name="next" value="{{ redirect_to }}">
+                        {% if LANGUAGE_CODE == 'ar'%}                       
+                        <button type="submit" name="language" value="en" class="btn btn-outline-light" >
+                           <i class="bi bi-translate">&nbsp;&nbsp;EN</i> </button>                        
+                                    {% else %}
+                        <button type="submit" name="language" value="ar" class="btn btn-outline-light">
+                            <i class="bi bi-translate">AR</i></button>                    
+                                    {% endif %}                        
+                    </form>                                             
+                </li>                        
+            </ul>                 
+</header>      
+                <!-- ======= Hero Section ======= -->
+<section id="hero">
+    <div class="hero-container " data-aos="fade-up">
+        <h3>{% trans 'Dar Al-Salam International University' %}</h3>
+      <h4>{% trans 'We raise you to a broader horizon' %}</h4>
+        <a href="#about" class="btn-get-started scrollto"><i class="bx bx-chevrons-down"></i></a>
+    </div>
+</section><!-- End Hero -->
+
+<!-- End Header -->

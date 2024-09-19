@@ -1,0 +1,579 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2023-05-17 15:13+0300\n"
+"PO-Revision-Date: 2023-05-17 15:12+0000\n"
+"Last-Translator:   <>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=6; plural=n==0 ? 0 : n==1 ? 1 : n==2 ? 2 : n%100>=3 "
+"&& n%100<=10 ? 3 : n%100>=11 && n%100<=99 ? 4 : 5;\n"
+"X-Translated-Using: django-rosetta 0.9.9\n"
+
+#: .\studentaff\models.py:37 .\templates\footer.html:65
+msgid "Name"
+msgstr "الاسم"
+
+#: .\studentaff\models.py:38
+msgid "Gender"
+msgstr "الجنس"
+
+#: .\studentaff\models.py:39
+msgid "Nationality"
+msgstr "الجنسية"
+
+#: .\studentaff\models.py:40
+msgid "Birth place"
+msgstr "مكان الميلاد"
+
+#: .\studentaff\models.py:41
+msgid "Birth date"
+msgstr "تاريخ الميلاد"
+
+#: .\studentaff\models.py:42
+msgid "High school ype"
+msgstr "نوع الثانوية"
+
+#: .\studentaff\models.py:43
+msgid "rate"
+msgstr "المعدل"
+
+#: .\studentaff\models.py:44
+msgid "Certification date"
+msgstr "تاريخ الشهادة"
+
+#: .\studentaff\models.py:45
+msgid "Certification place"
+msgstr "مكان الحصول عليها"
+
+#: .\studentaff\models.py:46
+msgid "governer"
+msgstr "المحافظة"
+
+#: .\studentaff\models.py:47
+msgid "School"
+msgstr "المدرسة"
+
+#: .\studentaff\models.py:48
+msgid "Emission date"
+msgstr "تاريخ الإصدار"
+
+#: .\studentaff\models.py:49
+msgid "Emission place"
+msgstr "مكان الإصدار"
+
+#: .\studentaff\models.py:51
+msgid "Phone"
+msgstr "رقم الهاتف"
+
+#: .\studentaff\models.py:52 .\templates\footer.html:18
+#: .\templates\footer.html:74
+msgid "Address"
+msgstr "العنوان"
+
+#: .\studentaff\models.py:53
+msgid "Email"
+msgstr "البريد"
+
+#: .\studentaff\models.py:54
+msgid "Relationship"
+msgstr "ولي الامر"
+
+#: .\studentaff\models.py:55
+msgid "Relationship Phone"
+msgstr "هاتف ولي الامر"
+
+#: .\studentaff\models.py:58
+msgid "Major"
+msgstr "التخصص"
+
+#: .\studentaff\models.py:60
+msgid "ID type"
+msgstr "نوع الهوية"
+
+#: .\studentaff\models.py:61
+msgid "ID number"
+msgstr "رقم الهوية"
+
+#: .\templates\Collage\engineering\major.html:22
+#: .\templates\Collage\engineering\major.html:44
+#: .\templates\Collage\humanities\major.html:23
+#: .\templates\Collage\humanities\major.html:45
+#: .\templates\Collage\medicine\major.html:22
+#: .\templates\Collage\medicine\major.html:44
+msgid "Major Information"
+msgstr "نبذة عن التخصص"
+
+#: .\templates\Collage\engineering\major.html:27
+#: .\templates\Collage\engineering\major.html:49
+#: .\templates\Collage\humanities\major.html:28
+#: .\templates\Collage\humanities\major.html:50
+#: .\templates\Collage\medicine\major.html:27
+#: .\templates\Collage\medicine\major.html:49
+msgid "Section Information"
+msgstr "نبذة عن القسم الجامعي"
+
+#: .\templates\Collage\engineering\major.html:35
+#: .\templates\Collage\engineering\major.html:57
+#: .\templates\Collage\humanities\major.html:36
+#: .\templates\Collage\humanities\major.html:58
+#: .\templates\Collage\medicine\major.html:35
+#: .\templates\Collage\medicine\major.html:57
+msgid "Goals"
+msgstr "الأهداف"
+
+#: .\templates\Collage\engineering\strategy.html:21
+#: .\templates\Collage\engineering\strategy.html:27
+#: .\templates\Collage\humanities\strategy.html:22
+#: .\templates\Collage\humanities\strategy.html:28
+#: .\templates\Collage\medicine\strategy.html:21
+#: .\templates\Collage\medicine\strategy.html:25
+msgid "Strategy"
+msgstr "الاستراتيجية"
+
+#: .\templates\Collage\engineering\team.html:20
+msgid "Engineering Collage Team"
+msgstr "كادر كلية الهندسة"
+
+#: .\templates\Collage\humanities\team.html:19
+msgid "Humantiy Collage Team"
+msgstr "كادر كلية الآداب والعلوم الإنسانية "
+
+#: .\templates\Collage\medicine\team.html:17
+msgid "Medicine Collage Team"
+msgstr "كادر كلية الطب"
+
+#: .\templates\UnivInfo\univteam.html:23
+msgid "University Team"
+msgstr "كادر الجامعة"
+
+#: .\templates\UnivInfo\univteam.html:42 .\templates\news\activities.html:40
+#: .\templates\univlife\perfectstu.html:39 .\templates\univlife\univenv.html:38
+msgid "Details"
+msgstr "التفاصيل"
+
+#: .\templates\body.html:15
+msgid ""
+"We are distinguished by an educational level according to international "
+"principles and standards"
+msgstr "نتميز بمستوى تعليمي وفق أسس ومعايير عالمية "
+
+#: .\templates\body.html:16
+msgid "Here you can get the full value of education"
+msgstr "هنا يمكنك الحصول على القيمة الكاملة للتعليم"
+
+#: .\templates\body.html:18
+msgid "See more"
+msgstr "اطلاع اكثر "
+
+#: .\templates\body.html:28 .\templates\navbar.html:85
+msgid "Univ Environment"
+msgstr "البيئة الجامعية"
+
+#: .\templates\body.html:30
+msgid ""
+"Specially designed to suit the student's educational atmosphere, meeting all "
+"student and academic needs"
+msgstr ""
+"مصممة خصيصاً لتناسب الجو التعليمي للطالب ملبيةً جميع الاحتياجات الطلابية "
+"والأكاديمية "
+
+#: .\templates\body.html:35
+msgid "Lab"
+msgstr "المختبرات"
+
+#: .\templates\body.html:37
+msgid ""
+"Equipped with the best tools and modern technologies, which contributes to "
+"benefiting from new technology and stimulates the demand for learning"
+msgstr ""
+"مجهزة بأفضل الأدوات والتقنيات الحديثة مما يساهم من الاستفادة من التكنلوجيا "
+"الجديدة ويحفز الطلب للتعلم "
+
+#: .\templates\body.html:42 .\templates\navbar.html:37
+msgid "Univ Team"
+msgstr "كادر الجامعة"
+
+#: .\templates\body.html:44
+msgid ""
+"Distinguished staff with high capabilities and skills committed to providing "
+"the best service value to the student"
+msgstr "كادر متميز ذو قدرات ومهارات عالية ملتزم بتقديم افضل قيمة خدمية للطالب"
+
+#: .\templates\body.html:49
+msgid "message"
+msgstr "الرسالة"
+
+#: .\templates\body.html:51
+msgid "We strive to be the best by keeping abreast of scientific developments"
+msgstr "نسعى لان نكون الأفضل من خلال مواكبة التطورات العلمية"
+
+#: .\templates\body.html:64
+msgid "Student Services"
+msgstr "خدمات الطالب"
+
+#: .\templates\body.html:66
+msgid ""
+"We always strive to be the best and we are honored to serve and guide the "
+"university student and we strive to improve in all educational aspects And "
+"educational through active participation in all fields and development and "
+"modernization in scientific and professional fields"
+msgstr ""
+"نسعى دائماً الى ان نكون الافضل ونتشرف بخدمة وتوجية الطالب الجامعي ونسعى "
+"للارتقاء في جميع الجوانب التعليمية\n"
+"          والتربوية من خلال المشاركة الفعالة في جميع الميادين والتطوير "
+"والتحديث في المحالات العلمية والمهنية "
+
+#: .\templates\body.html:72
+msgid "Registration"
+msgstr "التسجيل"
+
+#: .\templates\body.html:73
+msgid "We are pleased to have you join one of our distinguished colleges"
+msgstr "يسعدنا ان تنظم الى احدى كلياتنا المتميزة"
+
+#: .\templates\body.html:80
+msgid "Student Activities"
+msgstr "الأنشطة الطلابية"
+
+#: .\templates\body.html:81
+msgid "You can view the outstanding student activities"
+msgstr "يمكنك الاطلاع على الأنشطة الطلابية المتميزة"
+
+#: .\templates\body.html:88
+msgid "E-learning"
+msgstr "التعليم الالكتروني"
+
+#: .\templates\body.html:89
+msgid "From here you can view many scientific topics"
+msgstr "من هنا يمكنك عرض الكثير من المواضيع"
+
+#: .\templates\body.html:96 .\templates\navbar.html:71
+msgid "Student Result"
+msgstr "نتيجة الطالب"
+
+#: .\templates\body.html:97
+msgid "From here you can inquire about your academic results"
+msgstr "من هنا يمكنك الاستعلام عن الدرجات"
+
+#: .\templates\body.html:127
+msgid "Labs with the latest technology"
+msgstr "معامل بأحدث التقنيات "
+
+#: .\templates\body.html:128
+msgid ""
+"The university provides laboratories and laboratories with high capabilities "
+"to meet the students' needs for practical application and to train them on "
+"all systems and devices."
+msgstr ""
+"توفر الجامعة معامل ومختبرات بإمكانيات عالية لتلبي احتياجات الطلاب للتطبيق "
+"العملي وتدريبهم على جميع الأنظمة والأجهزة."
+
+#: .\templates\body.html:171 .\templates\navbar.html:75
+#: .\templates\navbar.html:77 .\templates\news\news.html:23
+msgid "News"
+msgstr "الاخبار"
+
+#: .\templates\body.html:200
+msgid "Advertisments"
+msgstr "الاعلانات"
+
+#: .\templates\footer.html:10
+msgid "Contact us"
+msgstr "التواصل"
+
+#: .\templates\footer.html:11
+msgid ""
+"Please contact us via the numbers and addresses shown at the bottom of the "
+"page Thank you for contacting us and sending your constructive suggestions "
+"via email or social media"
+msgstr ""
+"يرجى التواصل معنا عبر الأرقام والعناوين الموضحة اسفل الصفحة شكرا لك على "
+"تواصلك معنا وإرسال اقتراحاتك البناءة عبر البريد الالكتروني او وسائل التواصل "
+"الاجتماعي"
+
+#: .\templates\footer.html:19 .\templates\footer.html:109
+msgid "Republic of Yemen, Sana'a, Al-Jarf, east of Al-Thawra Sports Stadium"
+msgstr "الجمهورية اليمينة صنعاء - حدة، فج عطان، شارع بيروت "
+
+#: .\templates\footer.html:26
+msgid "Email US"
+msgstr "راسلنا بريدياً"
+
+#: .\templates\footer.html:36
+msgid "Call Us"
+msgstr "اتصل بنا"
+
+#: .\templates\footer.html:37
+msgid "Phone number: "
+msgstr "رقم الهاتف"
+
+#: .\templates\footer.html:47
+msgid "Yemen"
+msgstr "اليمن"
+
+#: .\templates\footer.html:69
+msgid "Your Email"
+msgstr "بريدك"
+
+#: .\templates\footer.html:78
+msgid "Message"
+msgstr "الرسالة"
+
+#: .\templates\footer.html:81
+msgid "Loading"
+msgstr "تحميل"
+
+#: .\templates\footer.html:83
+msgid "Your message has been sent. Thank you!"
+msgstr "تم ارسال رسالتك بنجاح. شكراً لك!"
+
+#: .\templates\footer.html:85
+msgid "Send"
+msgstr "إرسال"
+
+#: .\templates\footer.html:104 .\templates\navbar.html:144
+msgid "Dar Al-Salam International University"
+msgstr "جامعة دار السلام الدولية"
+
+#: .\templates\footer.html:105
+msgid ""
+"You can contact us by phone or mail You can also follow our social media "
+"accounts"
+msgstr ""
+"يمكنك التواصل معنا هاتفياً او بريدياً ومتابعة وسائل التواصل الاجتماعي الخاصة "
+"بنا"
+
+#: .\templates\footer.html:111
+msgid "Phone:"
+msgstr "رقم الهاتف"
+
+#: .\templates\footer.html:113
+msgid "Email:"
+msgstr "البريد"
+
+#: .\templates\footer.html:130
+msgid "Usefull link"
+msgstr "روابط مفيدة"
+
+#: .\templates\footer.html:132 .\templates\navbar.html:22
+msgid "Home"
+msgstr "الرئيسية"
+
+#: .\templates\footer.html:133 .\templates\navbar.html:25
+msgid "About Univ"
+msgstr "عن الجامعة"
+
+#: .\templates\footer.html:134 .\templates\navbar.html:45
+msgid "Medicine Collage"
+msgstr "كلية الطب"
+
+#: .\templates\footer.html:135 .\templates\navbar.html:54
+msgid "Engineering Collage"
+msgstr "كلية الهندسة"
+
+#: .\templates\footer.html:136
+msgid "Medicine Collage Lab"
+msgstr "كلية الطب"
+
+#: .\templates\footer.html:137
+msgid "Engineering Collage Lab"
+msgstr "كلية الهندسة"
+
+#: .\templates\footer.html:142
+msgid "Our Services"
+msgstr "خدماتنا"
+
+#: .\templates\footer.html:144
+msgid "Student registration"
+msgstr "نتيجة الطالب"
+
+#: .\templates\footer.html:145
+msgid "Acadimic Activities"
+msgstr "الانشطة"
+
+#: .\templates\footer.html:146
+msgid "Student result"
+msgstr "نتيجة الطالب"
+
+#: .\templates\footer.html:147
+msgid "Studying and research"
+msgstr " الدراسات والأبحاث"
+
+#: .\templates\footer.html:148
+msgid "Electornic learning"
+msgstr "التعليم الالكتروني"
+
+#: .\templates\footer.html:149
+msgid "registration to Univ"
+msgstr "التسجيل في الجامعة"
+
+#: .\templates\footer.html:154
+msgid "Join Us"
+msgstr "انظم الينا"
+
+#: .\templates\footer.html:154
+msgid "From here you can join us via your e-mail"
+msgstr "من هنا يمكنك الانظمام الينا بريدياً"
+
+#: .\templates\footer.html:167
+msgid "Dar Al-Salam International University .all rights are save"
+msgstr " جامعة دار السلام الدولية"
+
+#: .\templates\header.html:6
+msgid "Univ"
+msgstr "الجامعة"
+
+#: .\templates\navbar.html:28
+msgid "Brief About Univ"
+msgstr "نبذة عن الجامعة"
+
+#: .\templates\navbar.html:30
+msgid "Message and Vision"
+msgstr "الرؤية والرسالة"
+
+#: .\templates\navbar.html:31
+msgid "Chairman presedent"
+msgstr "رئيس مجلس الامناء"
+
+#: .\templates\navbar.html:32
+msgid "Univ presedent word"
+msgstr "كلمة رئيس الجامعة"
+
+#: .\templates\navbar.html:33
+msgid "E-Learning"
+msgstr "التعليم الالكتروني"
+
+#: .\templates\navbar.html:34
+msgid "Studying and Research"
+msgstr " الدراسات والابحاث"
+
+#: .\templates\navbar.html:42
+msgid "Collages"
+msgstr "الكليات"
+
+#: .\templates\navbar.html:47 .\templates\navbar.html:57
+msgid "Collage Strategy"
+msgstr "استراتيجية الكلية"
+
+#: .\templates\navbar.html:48 .\templates\navbar.html:58
+msgid "Collage Major"
+msgstr "تخصصات الكلية"
+
+#: .\templates\navbar.html:49 .\templates\navbar.html:59
+msgid "Collage Library"
+msgstr "مكتبة الكلية"
+
+#: .\templates\navbar.html:50 .\templates\navbar.html:60
+msgid "Collage Team"
+msgstr "كادر الكلية"
+
+#: .\templates\navbar.html:66
+msgid "Students Affairs"
+msgstr "شؤون الطلاب"
+
+#: .\templates\navbar.html:68
+msgid "Studying Schedule"
+msgstr "الجداول الدراسية"
+
+#: .\templates\navbar.html:69
+msgid "Acceptance And Registration"
+msgstr "القبول والتسجيل"
+
+#: .\templates\navbar.html:70
+msgid "Electronic Croodination Portal"
+msgstr "بوابة التعليم الالكتروني"
+
+#: .\templates\navbar.html:78
+msgid "Advertisment"
+msgstr "الاعلانات"
+
+#: .\templates\navbar.html:79 .\templates\news\activities.html:21
+msgid "Activities"
+msgstr "الانشطة"
+
+#: .\templates\navbar.html:83
+msgid "Univ Life"
+msgstr "الحياة الجامعية"
+
+#: .\templates\navbar.html:86
+msgid "Early University Student"
+msgstr "اوائل الطلاب"
+
+#: .\templates\navbar.html:87
+msgid "Service Facilities"
+msgstr "المرافق الخدمية"
+
+#: .\templates\navbar.html:88
+msgid "Student guide"
+msgstr "الارشاد الطلابي"
+
+#: .\templates\navbar.html:92
+msgid "Univ Lab"
+msgstr "مختبرات الجامعة"
+
+#: .\templates\navbar.html:94
+msgid "Medicine Lab"
+msgstr "معامل كلية الطب"
+
+#: .\templates\navbar.html:95
+msgid "Engineering Lab"
+msgstr "معامل كلية الهندسة"
+
+#: .\templates\navbar.html:98
+msgid "Contact"
+msgstr "التواصل"
+
+#: .\templates\navbar.html:104
+msgid "Save"
+msgstr "حفظ"
+
+#: .\templates\navbar.html:145
+msgid "We raise you to a broader horizon"
+msgstr "نرتقي بك الى افق اوسع"
+
+#: .\templates\news\ads.html:18
+msgid "Advertisement"
+msgstr "الإعلانات"
+
+#: .\templates\studentaff\documents.html:23
+msgid "No documents found."
+msgstr "لم يتم العثور على بيانات"
+
+#: .\templates\studentaff\login.html:30
+msgid "Student Registration"
+msgstr "تسجيل طالب"
+
+#: .\templates\studentaff\login.html:31
+msgid "Please make sure that the data entered is correct to avoid any errors"
+msgstr "نرجو التأكد من صحة البيانات المدخلة تجنباً لوقوع اية أخطاء"
+
+#: .\templates\studentaff\login.html:38
+msgid "Register"
+msgstr "التسجيل"
+
+#: .\templates\univlab\engLab.html:44
+msgid "Engineering collage lab"
+msgstr "معامل كلية الهندسة"
+
+#: .\templates\univlab\medLab.html:20
+msgid "Medicine collage lab"
+msgstr "معامل كلية الطب"
+
+#: .\templates\univlife\perfectstu.html:19
+msgid "Earlier Students"
+msgstr "أوائل الطلاب"
+
+#: .\templates\univlife\univenv.html:20
+msgid "University Environment"
+msgstr "البيئة الجامعية"

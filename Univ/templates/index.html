@@ -1,0 +1,10 @@
+<!DOCTYPE html>
+{% load i18n %}
+{% get_current_language_bidi as LANGUAGE_BIDI %}  <!-- 1 -->
+<html dir="{% if LANGUAGE_BIDI %}rtl{% else %}ltr{% endif %}">  <!-- 2 -->
+<!-- <html lang="ar" dir="rtl">   -->
+    {% include 'header.html' %}
+    {% include 'navbar.html' %}  
+    {% include 'body.html' %}
+    {% include 'footer.html' %}
+</html>

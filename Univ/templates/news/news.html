@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+{% load static i18n %}
+{% get_current_language_bidi as LANGUAGE_BIDI %}  <!-- 1 -->
+<html dir="{% if LANGUAGE_BIDI %}rtl{% else %}ltr{% endif %}">  <!-- 2 -->
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+   
+
+
+
+{%include 'navbar.html'%}
+
+<!-- ======= Team Section ======= -->
+<section id="team" class="team">
+    <div class="container">
+
+        <div class="section-title" data-aos="fade-in" data-aos-delay="100">
+            <h2>{% trans 'News' %}</h2>
+          
+        </div>
+
+        <div class="row my-5">
+{% for d1 in data %}
+            <div class="col-lg-4 col-md-6">
+                <div class="member" data-aos="fade-up">
+                    {% if LANGUAGE_CODE == 'ar'%}
+                    <div class="pic"><img src="{{d1.image.url}}" class="img-fluid" alt=""></div>
+                    <div class="member-info">
+                        <h4>{{d1.title_ar}}</h4>
+                        <span>{{d1.subject_ar}}</span>
+                        {% else %}
+                        <div class="pic"><img src="{{d1.image.url}}" class="img-fluid" alt=""></div>
+                        <div class="member-info">
+                            <h4>{{d1.title}}</h4>
+                            <span>{{d1.subject}}</span>
+                        {% endif  %}
+                        <div class="social">                           
+                            <a href="{% url 'news_details' d1.id %}" class="about-btn"><i class="bi bi-arrow-bar-left about-btn ">التفاصيل</i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+{% endfor%}
+        </div>
+    </div>
+</section>
+<!-- End Team Section -->
+{% include 'footer.html' %}
+ 
+</body>
+</html>
+

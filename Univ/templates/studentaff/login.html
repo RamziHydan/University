@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+{% load static i18n %}
+{% get_current_language_bidi as LANGUAGE_BIDI %}  <!-- 1 -->
+<html dir="{% if LANGUAGE_BIDI %}rtl{% else %}ltr{% endif %}">  <!-- 2 -->
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link href="https://cdn.jsdelivr.net/gh/hung1001/font-awesome-pro-v6@44659d9/css/all.min.css" rel="stylesheet"
+        type="text/css" />
+
+
+    <link rel="preconnect" href="https://fonts.googleapis.com/css?family=Tangerine">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=FAMILY_NAME:wght@WEIGHT_OR_RANGE&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+
+    {% include 'header.html' %}
+    {%include 'navbar.html'%}
+    {% load bootstrap5 %}
+    <section id="contact" class="contact section-bg">
+        <div class="container align-center" data-aos="fade-up">
+            <div class="section-title">
+                <h2>  {% trans 'Student Registration' %}</h2>
+                <p>{% trans 'Please make sure that the data entered is correct to avoid any errors'%}</p>
+            </div>
+            <div class="row ">
+                <div class="col">
+                    <form method="post" class="form-control ">
+                        {% csrf_token %}
+                        {% bootstrap_form data %}
+                        <button type="submit" class="btn btn-primary">{% trans 'Register' %}</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+        </div>
+    </section>
+    {% include 'footer.html' %}
+</body>
+</html>

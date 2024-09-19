@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+{% load static i18n %}
+{% get_current_language_bidi as LANGUAGE_BIDI %}  <!-- 1 -->
+<html dir="{% if LANGUAGE_BIDI %}rtl{% else %}ltr{% endif %}">  <!-- 2 -->
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    {%include 'navbar.html'%}
+    <section id="team" class="team">
+        <div class="container mb-5">
+            <div class="section-title" data-aos="fade-in" data-aos-delay="100">
+                <h2>{% trans 'Medicine Collage Team' %}</h2>
+                <p></p>
+            </div>
+            <div class="row">
+                {% for t in data %}
+                <div class="col-lg-4 col-md-6">
+                    <div  class="member" data-aos="fade-up" >
+                        {% if LANGUAGE_CODE == 'ar'%}
+                        <div class="pic" ><img src={{t.image.url}} class="img-fluid" alt=""></div>
+                        <div class="member-info" >
+                            <h3>{{t.name_ar}}</h3>
+                            <span>{{t.job_ar}}</span>                            
+                        </div>
+                        {% else %}
+                        <div class="pic" ><img src={{t.image.url}} class="img-fluid" alt=""></div>
+                        <div class="member-info" >
+                            <h3>{{t.name}}</h3>
+                            <span>{{t.job}}</span>                            
+                        </div>
+                        {% endif %}
+                    </div>
+                </div>
+                {% endfor %}
+            </div>
+        </div>
+    </section>    
+    {% include 'footer.html' %}
+</body>
+</html>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+{% load static i18n %}
+{% get_current_language_bidi as LANGUAGE_BIDI %}  <!-- 1 -->
+<html dir="{% if LANGUAGE_BIDI %}rtl{% else %}ltr{% endif %}">  <!-- 2 -->
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+   
+
+
+{% include 'navbar.html' %}
+{% for d in student %}
+<div class="container ">
+    <div class="row mt-5 mb-4">
+        {% if LANGUAGE_CODE == 'ar'%} 
+        <div class="col-lg-10 col-md-5 pt-5">       
+            <div class="pic"><img src="{{d.image.url}}" class="img-fluid"  alt=""></div>
+            <h5>{{d.detail_ar}}</h5> <br>
+        {% else  %}
+            <div class="pic"><img src="{{d.image.url}}" class="img-fluid"  alt=""></div>
+            <h5>{{d.detail}}</h5> <br>
+        </div>
+    </div>
+</div>
+{% endfor %}
+{% include 'footer.html' %}
+</body>
+</html>
+

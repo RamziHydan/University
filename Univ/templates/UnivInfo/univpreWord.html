@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+{% load static i18n %}
+{% get_current_language_bidi as LANGUAGE_BIDI %}  <!-- 1 -->
+<html dir="{% if LANGUAGE_BIDI %}rtl{% else %}ltr{% endif %}">  <!-- 2 -->
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+
+
+<body>
+    {%include 'navbar.html'%}
+
+    <div class="container my-5">        
+        <!-- ======= Vision Section ======= -->
+        <section id="Vision" class="team">
+            <div class="container mb-5">
+                <div class="row">
+                    <div class="section-title" data-aos="fade-in" data-aos-delay="100">
+                        {% for v in data %}                       
+                        {% if LANGUAGE_CODE == 'ar'%}
+                        <section id="cta" class="cta">
+                            <div class="container p-5" data-aos="zoom-in">
+                                <div class="text-center p-5">
+                                    <div class="img">
+                                        <div class="pic"><img src={{v.image.url}} class="img-fluid" alt=""></div>
+                                    </div>
+                                    <h3>{{v.name_ar}}</h3>                                    
+                                    <h4>{{v.Header_ar}}</h4>                                    
+                                    <h5> {{v.word_ar}}</h5>
+                                </div>
+                            </div>
+                        </section>
+                        {% else %}
+                        <section id="cta" class="cta">
+                            <div class="container p-5" data-aos="zoom-in">
+                                <div class="text-center p-5">
+                                    <div class="img">
+                                        <div class="pic"><img src={{v.image.url}} class="img-fluid" alt=""></div>
+                                    </div>
+                                    <h3>{{v.name}}</h3>                                    
+                                    <h4>{{v.Header}}</h4>                                    
+                                    <h5> {{v.word}}</h5>
+                                </div>
+                            </div>
+                        </section>
+                        {% endif %}
+                        {% endfor %}
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- End Vision Section -->       
+    </div>
+    {% include 'footer.html' %}
+
+</body>
+
+</html>

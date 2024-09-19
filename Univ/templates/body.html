@@ -1,0 +1,219 @@
+<body>
+{% load static %}
+{% load i18n %}
+
+
+
+<main id="main">
+  <!-- ======= About Section ======= -->
+  <section id="about" class="about">
+    <div class="container">
+      <div class="row no-gutters">
+        <div class="content col-xl-5 d-flex align-items-stretch" data-aos="fade-up">
+          <div class="content">
+
+            <h3>{% trans 'We are distinguished by an educational level according to international principles and standards' %}</h3>
+            <p>{% trans 'Here you can get the full value of education' %}
+            </p>
+            <a href="https://www.facebook.com/universitydaralsalaam" class="about-btn">{% trans 'See more' %}<i
+                class="bx bx-chevron-right"></i></a>
+          </div>
+        </div>
+        <div class="col-xl-7 d-flex align-items-stretch">
+          <div class="icon-boxes d-flex flex-column justify-content-center">
+            <div class="row">
+              <div class="col-md-6 icon-box" data-aos="fade-up" data-aos-delay="100">
+                <i class="bx bx-receipt"></i>
+                <a href="{% url 'env' %}">
+                  <h4> {% trans 'Univ Environment' %}</h4>
+                </a>
+                <p>{% trans "Specially designed to suit the student's educational atmosphere, meeting all student and academic needs" %}</p>
+              </div>
+              <div class="col-md-6 icon-box" data-aos="fade-up" data-aos-delay="200">
+                <i class="bx bx-cube-alt"></i>
+                <a href="{% url 'medlab' %}">
+                  <h4> {% trans 'Lab' %}</h4>
+                </a>
+                <p>{% trans 'Equipped with the best tools and modern technologies, which contributes to benefiting from new technology and stimulates the demand for learning' %}</p>
+              </div>
+              <div class="col-md-6 icon-box" data-aos="fade-up" data-aos-delay="300">
+                <i class="bx bx-images"></i>
+                <a href="{% url 'Univteam' %}">
+                  <h4>{% trans 'Univ Team' %}</h4>
+                </a>
+                <p>{% trans 'Distinguished staff with high capabilities and skills committed to providing the best service value to the student' %}</p>
+              </div>
+              <div class="col-md-6 icon-box" data-aos="fade-up" data-aos-delay="400">
+                <i class="bx bx-shield"></i>
+                <a href="{% url 'vision' %}">
+                  <h4>{% trans 'message' %}</h4>
+                </a>
+                <p>{% trans 'We strive to be the best by keeping abreast of scientific developments' %}</p>
+              </div>
+            </div>
+          </div><!-- End .content-->
+        </div>
+      </div>
+    </div>
+  </section><!-- End About Section -->
+
+  <!-- ======= Services Section ======= -->
+  <section id="services" class="services">
+    <div class="container">
+      <div class="section-title" data-aos="fade-in" data-aos-delay="100">
+        <h2>{% trans 'Student Services' %}</h2>
+        <p> <h4> 
+          {% trans "We always strive to be the best and we are honored to serve and guide the university student and we strive to improve in all educational aspects And educational through active participation in all fields and development and modernization in scientific and professional fields" %}</h4></p>
+      </div>
+      <div class="row">
+        <div class="col-md-6 col-lg-3 d-flex align-items-stretch mb-5 mb-lg-0">
+          <div class="icon-box" data-aos="fade-up">
+            <div class="icon"><i class="bi bi-box-arrow-in-right"></i></div>
+            <h4 class="title"><a href="{% url 'login' %}">{% trans 'Registration' %}</a></h4>
+            <p class="description">{% trans 'We are pleased to have you join one of our distinguished colleges' %}</p>
+          </div>
+        </div>
+
+        <div class="col-md-6 col-lg-3 d-flex align-items-stretch mb-5 mb-lg-0">
+          <div class="icon-box" data-aos="fade-up" data-aos-delay="100">
+            <div class="icon"><i class="bi bi-mortarboard-fill"></i></div>
+            <h4 class="title"><a href="{% url 'activities' %}">{% trans 'Student Activities' %}</a></h4>
+            <p class="description">{% trans 'You can view the outstanding student activities' %}</p>
+          </div>
+        </div>
+
+        <div class="col-md-6 col-lg-3 d-flex align-items-stretch mb-5 mb-lg-0">
+          <div class="icon-box" data-aos="fade-up" data-aos-delay="200">
+            <div class="icon"><i class="bi bi-journal-bookmark"></i></i></div>
+            <h4 class="title"><a href="https://www.darsys.online/darsysonline/"> {% trans 'E-learning' %}</a></h4>
+            <p class="description">{% trans 'From here you can view many scientific topics' %}</p>
+          </div>
+        </div>
+
+        <div class="col-md-6 col-lg-3 d-flex align-items-stretch mb-5 mb-lg-0">
+          <div class="icon-box" data-aos="fade-up" data-aos-delay="300">
+            <div class="icon"><i class="bi bi-pass"></i></div>
+            <h4 class="title"><a href="http://111.118.176.122/XLWeb/default.aspx?u=DarAlslamUniv.html">{% trans 'Student Result' %}</a></h4>
+            <p class="description">{% trans 'From here you can inquire about your academic results' %}</p>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </section><!-- End Services Section -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+  {% block content %}
+  {% endblock %}
+
+
+  <section id="testimonials" class="testimonials section-bg">
+    <div class="container">
+
+      <div class="section-title" data-aos="fade-in" data-aos-delay="100">
+        <h2></h2>
+        <h2>{% trans 'Labs with the latest technology' %}</h2>
+        <p>{% trans "The university provides laboratories and laboratories with high capabilities to meet the students' needs for practical application and to train them on all systems and devices." %}</p>
+      </div>
+
+      <div class="testimonials-slider swiper" data-aos="fade-up" data-aos-delay="100">
+
+        <div class="swiper-wrapper">
+
+          {% for t in data %}
+          <div class="swiper-slide">
+            <div class="testimonial-item">
+              <P>
+                <img src={{t.image.url}} class="img-fluid" alt="" width="200" height="200">
+              </P>
+              <img src="assets/img/testimonials/testimonials-2.jpg" class="testimonial-img" alt="">
+              <h3>{{t.collage_name_ar}}</h3>
+              <span>{{t.lab_name_ar}}</span>
+            </div>
+          </div><!-- End testimonial item -->
+          {% endfor%}
+
+          {% for t1 in data1 %}
+          <div class="swiper-slide">
+            <div class="testimonial-item">
+              <P>
+                <img src={{t1.image.url}} class="img-fluid" alt="" width="200" height="200">
+              </P>
+              <img src="assets/img/testimonials/testimonials-2.jpg" class="testimonial-img" alt="">
+              <h3>{{t1.collage_name_ar}}</h3>
+              <span>{{t1.lab_name_ar}}</span>
+            </div>
+          </div><!-- End testimonial item -->
+          {% endfor%}
+        </div>
+  </section><!-- End Testimonials Section -->
+
+  </div>
+  </section><!-- End Testimonials Section -->
+
+  <!-- ======= Team Section ======= -->
+  <section id="team" class="team">
+    <div class="container">
+
+      <div class="section-title" data-aos="fade-in" data-aos-delay="100">
+        <h2>{% trans 'News' %}</h2>
+        <p></p>
+      </div>
+
+      <div class="row">
+
+        {% for d in data2 %}
+        <div class="col-lg-4 col-md-6">
+          <div class="member" data-aos="fade-up">
+            <div class="pic"><img src="{{d.image.url}}" class="img-fluid" alt=""></div>
+            <div class="member-info">
+              <h4>{{d.title_ar}}</h4>
+              <span>{{d.subject_ar}}</span>             
+            </div>
+          </div>
+        </div>
+        {% endfor%}
+
+
+      </div>
+
+    </div>
+  </section><!-- End Team Section -->
+
+  <!-- ======= Team Section ======= -->
+  <section id="team" class="team">
+    <div class="container">
+
+      <div class="section-title" data-aos="fade-in" data-aos-delay="100">
+        <h2>{% trans 'Advertisments'%}</h2>
+        <p></p>
+      </div>
+      <div class="row">
+        {% for a in data3 %}
+        <div class="col-lg-4 col-md-6">
+          <div class="member" data-aos="fade-up">
+            <div class="pic"><img src="{% if a.image %}  {{a.image.url}} {% else %} {% static '/EIU2021-08-23-543189.png' %} {% endif %}" class="img-fluid" alt=""></div>
+            <div class="member-info">
+              <h4>{{a.title_ar}}</h4>
+              <span>{{a.subject_ar}}</span>             
+            </div>
+          </div>
+        </div>
+        {% endfor%}
+      </div>
+    </div>
+  </section>
+  
+</body>
